@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  :root {
+    --background: 240 10% 2%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 100% 50%;
+    /* Electric Green */
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 10%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 12%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142 100% 50%;
+    --radius: 0.5rem;
+    --cyber-green: 142 100% 50%;
+    --cyber-cyan: 180 100% 50%;
+    --cyber-dim: 142 100% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans selection:bg-primary/30 selection:text-primary;
+    background-color: #000000;
+    background-image:
+      radial-gradient(circle at 50% 40%, hsl(var(--cyber-cyan) / 0.12), transparent 10%);
+    background-attachment: fixed;
+  }
+}
+
+
+.text-glow {
+  text-shadow:
+    0 0 10px hsl(var(--cyber-cyan) / 0.8),
+    0 0 20px hsl(var(--primary) / 0.5);
+}
+
+.card-glow:hover {
+  box-shadow:
+    0 0 20px hsl(var(--cyber-cyan) / 0.22),
+    0 0 35px hsl(var(--primary) / 0.18);
+  border-color: hsl(var(--cyber-cyan) / 0.5);
+}
+
+.cyber-grid {
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, hsl(var(--cyber-cyan) / 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--cyber-cyan) / 0.12) 1px, transparent 1px);
+}
+
+
+@keyframes cyber-scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    hsl(var(--cyber-cyan) / 0.03),
+    transparent
+  );
+  animation: cyber-scanline 10s linear infinite;
+  pointer-events: none;
+}
