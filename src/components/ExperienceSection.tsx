@@ -2,6 +2,44 @@ import { motion } from "framer-motion";
 import { Briefcase, Heart } from "lucide-react";
 
 const ExperienceSection = () => {
+    const workExperiences = [
+        {
+            title: "Penetration Tester Intern",
+            company: "Autocache",
+            companyUrl: "https://www.linkedin.com/company/autocache/",
+            period: "2026 – Present",
+            description: "Conducting penetration testing assessments, vulnerability analysis, and security audits.",
+            logo: "/logos/autocache.png",
+        },
+        {
+            title: "Bug Bounty Hunter (Independent Researcher)",
+            company: "Bugcrowd",
+            companyUrl: "https://www.linkedin.com/company/bugcrowd/",
+            period: "Jan 2026 – Present",
+            description:
+                "Participating in web application security testing on the Bugcrowd platform, identifying and reporting vulnerabilities and practicing responsible disclosure.",
+            logo: "/logos/bugcrowd.png",
+        },
+        {
+            title: "Bug Bounty Hunter | Independent Security Researcher",
+            company: "HackerOne",
+            companyUrl: "https://www.linkedin.com/company/hackerone/",
+            period: "Jan 2026 – Present",
+            description:
+                "Performing real-world web application penetration testing on HackerOne, focusing on issues such as XSS, IDOR, and SQL Injection while following disclosure processes.",
+            logo: "/logos/hackerone.png",
+        },
+        {
+            title: "Cybersecurity CTF Player | Red Team Practice",
+            company: "TryHackMe",
+            companyUrl: "https://www.linkedin.com/company/tryhackme/",
+            period: "Jan 2025 – Present",
+            description:
+                "Solving CTF challenges focused on web, network, and privilege escalation, practicing Red Team methodologies and achieving Gold League (Top ~6%) rankings.",
+            logo: "/logos/tryhackme.png",
+        },
+    ];
+
     return (
         <section id="experience" className="py-24 relative">
             <div className="container mx-auto px-6">
@@ -24,25 +62,53 @@ const ExperienceSection = () => {
                                 <h3 className="text-xl font-bold tracking-tight">Work</h3>
                             </div>
 
-                            <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="group p-6 rounded-lg border border-primary/20 bg-primary/5 border-glow transition-all"
-                            >
-                                <div className="flex items-start gap-4">
-                                    <div className="p-2 rounded bg-primary/10 text-primary">
-                                        <Briefcase className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-lg font-bold mb-1 text-foreground/90">Penetration Tester Intern</h4>
-                                        <div className="font-mono text-[10px] text-primary mb-3">Autocache | 2026 - Present</div>
-                                        <p className="text-xs text-muted-foreground leading-relaxed">
-                                            Conducting penetration testing assessments, vulnerability analysis, and security audits.
-                                        </p>
-                                    </div>
-                                </div>
-                            </motion.div>
+                            <div className="space-y-4">
+                                {workExperiences.map((exp, index) => (
+                                    <motion.div
+                                        key={exp.title}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: index * 0.06 }}
+                                        className="group p-6 rounded-lg border border-border bg-card/30 backdrop-blur-sm border-glow transition-all"
+                                    >
+                                        <div className="flex items-start gap-4">
+                                            <div className="shrink-0">
+                                                <div className="w-12 h-12 rounded-lg overflow-hidden bg-primary/5 border border-primary/30 flex items-center justify-center">
+                                                    {exp.logo ? (
+                                                        <img
+                                                            src={exp.logo}
+                                                            alt={`${exp.company} logo`}
+                                                            className="w-full h-full object-contain"
+                                                        />
+                                                    ) : (
+                                                        <Briefcase className="w-6 h-6 text-primary" />
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 className="text-lg font-bold mb-1 text-foreground/90">
+                                                    {exp.title}
+                                                </h4>
+                                                <div className="font-mono text-[10px] text-primary mb-3">
+                                                    <a
+                                                        href={exp.companyUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="hover:underline hover:text-primary/90"
+                                                    >
+                                                        {exp.company}
+                                                    </a>{" "}
+                                                    | {exp.period}
+                                                </div>
+                                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                                    {exp.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
                         </div>
 
                         {/* Volunteering */}
