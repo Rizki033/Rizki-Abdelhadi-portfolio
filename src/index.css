@@ -11,8 +11,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 142 100% 50%;
-    /* Electric Green */
+    --primary: 359 89% 66%;
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -24,11 +23,11 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 12%;
     --input: 240 3.7% 15.9%;
-    --ring: 142 100% 50%;
+    --ring: 359 89% 66%;
     --radius: 0.5rem;
-    --cyber-green: 142 100% 50%;
-    --cyber-cyan: 180 100% 50%;
-    --cyber-dim: 142 100% 10%;
+    --cyber-green: 359 89% 66%;
+    --cyber-cyan: 0 0% 85%;
+    --cyber-dim: 359 40% 10%;
   }
 }
 
@@ -39,34 +38,44 @@
 
   body {
     @apply bg-background text-foreground font-sans selection:bg-primary/30 selection:text-primary;
-    background-color: #000000;
+    background-color: #0a0a0b;
     background-image:
-      radial-gradient(circle at 50% 40%, hsl(var(--cyber-cyan) / 0.12), transparent 10%);
+      radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 28%),
+      radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.08), transparent 18%),
+      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04), transparent 22%);
     background-attachment: fixed;
   }
 }
 
-
 .text-glow {
   text-shadow:
-    0 0 10px hsl(var(--cyber-cyan) / 0.8),
-    0 0 20px hsl(var(--primary) / 0.5);
+    0 0 18px hsl(var(--primary) / 0.28);
 }
 
 .card-glow:hover {
   box-shadow:
-    0 0 20px hsl(var(--cyber-cyan) / 0.22),
-    0 0 35px hsl(var(--primary) / 0.18);
-  border-color: hsl(var(--cyber-cyan) / 0.5);
+    0 0 22px rgba(255, 107, 107, 0.08),
+    0 0 40px rgba(255, 255, 255, 0.04);
+  border-color: hsl(var(--primary) / 0.35);
+}
+
+.starfield {
+  background-image:
+    radial-gradient(circle at 12% 28%, rgba(255, 255, 255, 0.55) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 76% 18%, rgba(255, 255, 255, 0.42) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 64% 62%, rgba(255, 107, 107, 0.45) 0 4px, transparent 10px),
+    radial-gradient(circle at 32% 78%, rgba(255, 255, 255, 0.35) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 88% 80%, rgba(255, 255, 255, 0.3) 0 1px, transparent 2px),
+    radial-gradient(circle at 18% 52%, rgba(255, 255, 255, 0.34) 0 1px, transparent 2px);
+  background-repeat: no-repeat;
 }
 
 .cyber-grid {
-  background-size: 50px 50px;
+  background-size: 72px 72px;
   background-image:
-    linear-gradient(to right, hsl(var(--cyber-cyan) / 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(var(--cyber-cyan) / 0.12) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
-
 
 @keyframes cyber-scanline {
   0% {
@@ -88,9 +97,9 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    hsl(var(--cyber-cyan) / 0.03),
+    rgba(255, 255, 255, 0.015),
     transparent
   );
-  animation: cyber-scanline 10s linear infinite;
+  animation: cyber-scanline 16s linear infinite;
   pointer-events: none;
 }

@@ -12,11 +12,11 @@ const NavLink = ({ href, children, onClick, className = "" }: NavLinkProps) => {
         <a
             href={href}
             onClick={onClick}
-            className={`font-mono text-sm text-muted-foreground hover:text-primary transition-colors relative group ${className}`}
+            className={`font-sans text-sm text-foreground/70 hover:text-foreground transition-colors relative group ${className}`}
         >
             {children}
             <motion.span
-                className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"
+                className="absolute -bottom-2 left-0 h-px w-0 bg-primary transition-all group-hover:w-full"
                 layoutId="nav-underline"
             />
         </a>

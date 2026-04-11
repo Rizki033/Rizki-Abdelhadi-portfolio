@@ -9,7 +9,7 @@ const ExperienceSection = () => {
             companyUrl: "https://www.linkedin.com/company/autocache/",
             period: "2026 – Present",
             description: "Conducting penetration testing assessments, vulnerability analysis, and security audits.",
-            logo: "/logos/autocache.png",
+            logo: "/logos/autocache.svg",
         },
         {
             title: "Bug Bounty Hunter (Independent Researcher)",
@@ -18,7 +18,7 @@ const ExperienceSection = () => {
             period: "Jan 2026 – Present",
             description:
                 "Participating in web application security testing on the Bugcrowd platform, identifying and reporting vulnerabilities and practicing responsible disclosure.",
-            logo: "/logos/bugcrowd.png",
+            logo: "/logos/bugcrowd.svg",
         },
         {
             title: "Bug Bounty Hunter | Independent Security Researcher",
@@ -27,7 +27,7 @@ const ExperienceSection = () => {
             period: "Jan 2026 – Present",
             description:
                 "Performing real-world web application penetration testing on HackerOne, focusing on issues such as XSS, IDOR, and SQL Injection while following disclosure processes.",
-            logo: "/logos/hackerone.png",
+            logo: "/logos/hackerone.svg",
         },
         {
             title: "Cybersecurity CTF Player | Red Team Practice",
@@ -36,7 +36,7 @@ const ExperienceSection = () => {
             period: "Jan 2025 – Present",
             description:
                 "Solving CTF challenges focused on web, network, and privilege escalation, practicing Red Team methodologies and achieving Gold League (Top ~6%) rankings.",
-            logo: "/logos/tryhackme.png",
+            logo: "/logos/tryhackme.svg",
         },
     ];
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Shield } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Twitter, Mail, Shield } from "lucide-react";
 
 import TypingText from "./TypingText";
 
@@ -12,7 +12,7 @@ const HeroSection = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono mb-8"
+                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/[0.03] text-primary text-xs font-mono mb-8"
                 >
                     <Shield className="w-3 h-3" />
                     CYBERSECURITY ENGINEER
@@ -22,9 +22,9 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter"
+                    className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 tracking-tight"
                 >
-                    Abdelhadi <span className="text-primary text-glow">Rizki</span>
+                    Abdelhadi Rizki<span className="text-primary">.</span>
                 </motion.h1>
 
                 <motion.div
@@ -33,7 +33,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="group"
                 >
-                    <p className="font-mono text-base md:text-lg text-muted-foreground/90 mb-4 h-8 inline-block px-4 py-1 rounded-full hover:bg-primary/5 hover:text-primary transition-all cursor-default border border-transparent hover:border-primary/20">
+                    <p className="font-mono text-base md:text-lg text-muted-foreground/90 mb-5 h-8 inline-block px-4 py-1 rounded-full bg-white/[0.02] border border-white/8">
                         <TypingText texts={[
                             "Security Researcher",
                             "Junior Penetration Tester",
@@ -50,18 +50,25 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="max-w-xl mx-auto text-muted-foreground/80 leading-relaxed mb-10 text-sm md:text-base"
+                    className="max-w-2xl mx-auto text-muted-foreground/80 leading-relaxed mb-10 text-sm md:text-lg"
                 >
-                    Passionate about protecting the digital world through ethical hacking, threat
-                    analysis, and building intelligent security tools.
+                    I build a cybersecurity profile around offensive thinking, secure engineering,
+                    and clear execution, with a portfolio designed to feel sharp, calm, and intentional.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex items-center justify-center gap-4"
+                    className="flex flex-wrap items-center justify-center gap-4"
                 >
+                    <a
+                        href="#cv"
+                        className="inline-flex items-center gap-2 rounded-[16px] border border-primary/25 bg-primary/[0.08] px-5 py-3 text-sm font-medium text-primary transition-all hover:bg-primary/[0.12] hover:border-primary/40"
+                    >
+                        <span>View Resume</span>
+                        <ArrowDown className="w-4 h-4" />
+                    </a>
                     {[
                         { icon: Github, href: "https://github.com/0xRizki" },
                         { icon: Linkedin, href: "https://linkedin.com/in/0xRizki" },
@@ -73,9 +80,9 @@ const HeroSection = () => {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-3 rounded-lg border border-border bg-card/50 hover:border-primary/50 hover:bg-primary/5 transition-all group"
+                            className="p-3 rounded-[16px] border border-white/10 bg-white/[0.03] hover:border-primary/30 hover:bg-white/[0.06] transition-all group"
                         >
-                            <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                            <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
                         </a>
                     ))}
                 </motion.div>
@@ -85,10 +92,10 @@ const HeroSection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/40"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/50"
             >
                 <span className="text-[10px] font-mono tracking-widest uppercase">Scroll to initiate</span>
-                <div className="w-6 h-10 rounded-full border border-primary/20 flex items-start justify-center p-2">
+                <div className="w-6 h-10 rounded-full border border-white/10 flex items-start justify-center p-2">
                     <motion.div
                         animate={{ y: [0, 12, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
