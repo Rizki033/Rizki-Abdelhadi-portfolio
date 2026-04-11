@@ -32,9 +32,9 @@ const HomePage = () => {
                 <ContactSection />
             </main>
 
-            <footer className="py-10 text-center text-muted-foreground text-xs font-mono relative z-10 border-t border-border/50">
-                <p>&copy; {new Date().getFullYear()} 0xRizki. All systems nominal.</p>
-            </footer>
+            {/* <footer className="py-10 text-center text-muted-foreground text-xs font-mono relative z-10 border-t border-border/50">
+                <p>&copy; {new Date().getFullYear()} 0xRizki. All systems nomina    l.</p>
+            </footer> */}
         </div>
     );
 };

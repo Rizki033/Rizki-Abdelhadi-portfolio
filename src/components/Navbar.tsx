@@ -29,7 +29,6 @@ const Navbar = () => {
         { name: "Experience", href: "#experience" },
         { name: "Education", href: "#education" },
         { name: "Projects", href: "#projects" },
-        { name: "CV", href: "#cv" },
         { name: "Certs", href: "#certs" },
         { name: "Contact", href: "#contact" },
     ];
@@ -37,11 +36,10 @@ const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 px-4 pt-4 md:px-6 md:pt-5">
             <div
-                className={`mx-auto flex w-full max-w-4xl items-center justify-between rounded-[20px] border px-4 py-3 transition-all duration-300 md:px-6 ${
-                    isScrolled
-                        ? "border-white/10 bg-[#151518]/88 shadow-[0_20px_60px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
-                        : "border-white/8 bg-[#151518]/72 shadow-[0_14px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl"
-                }`}
+                className={`mx-auto flex w-full max-w-4xl items-center justify-between rounded-[20px] border px-4 py-3 transition-all duration-300 md:px-6 ${isScrolled
+                    ? "border-white/10 bg-[#151518]/88 shadow-[0_20px_60px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
+                    : "border-white/8 bg-[#151518]/72 shadow-[0_14px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl"
+                    }`}
             >
                 <a href="#" className="flex items-center gap-3 group shrink-0">
                     <span className="font-sans text-[1.75rem] font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">
@@ -63,7 +61,7 @@ const Navbar = () => {
                     href="#contact"
                     className="hidden md:inline-flex items-center gap-2 rounded-[14px] border border-primary/25 bg-primary/[0.08] px-4 py-2 text-sm text-primary transition-all hover:border-primary/45 hover:bg-primary/[0.12]"
                 >
-                    <span>Resume</span>
+                    <span>Let's talk</span>
                     <ArrowUpRight className="h-4 w-4" />
                 </a>
 

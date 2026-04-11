@@ -33,7 +33,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="group"
                 >
-                    <p className="font-mono text-base md:text-lg text-muted-foreground/90 mb-5 h-8 inline-block px-4 py-1 rounded-full bg-white/[0.02] border border-white/8">
+                    <p className="font-mono text-sm sm:text-base md:text-lg text-muted-foreground/90 mb-5 inline-flex items-center justify-center min-w-[280px] md:min-w-[340px] px-4 py-1.5 md:py-1 rounded-full bg-white/[0.02] border border-white/8 whitespace-nowrap">
                         <TypingText texts={[
                             "Security Researcher",
                             "Junior Penetration Tester",
@@ -60,31 +60,33 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex flex-wrap items-center justify-center gap-4"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4"
                 >
                     <a
                         href="#cv"
-                        className="inline-flex items-center gap-2 rounded-[16px] border border-primary/25 bg-primary/[0.08] px-5 py-3 text-sm font-medium text-primary transition-all hover:bg-primary/[0.12] hover:border-primary/40"
+                        className="inline-flex items-center justify-center w-full sm:w-auto gap-2 rounded-[16px] border border-primary/25 bg-primary/[0.08] px-8 py-3 text-sm font-medium text-primary transition-all hover:bg-primary/[0.12] hover:border-primary/40"
                     >
                         <span>View Resume</span>
                         <ArrowDown className="w-4 h-4" />
                     </a>
-                    {[
-                        { icon: Github, href: "https://github.com/0xRizki" },
-                        { icon: Linkedin, href: "https://linkedin.com/in/0xRizki" },
-                        { icon: Twitter, href: "https://twitter.com/0xRizki" },
-                        { icon: Mail, href: "mailto:rizki@example.com" },
-                    ].map((social, i) => (
-                        <a
-                            key={i}
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-3 rounded-[16px] border border-white/10 bg-white/[0.03] hover:border-primary/30 hover:bg-white/[0.06] transition-all group"
-                        >
-                            <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
-                        </a>
-                    ))}
+                    <div className="flex items-center justify-center gap-3">
+                        {[
+                            { icon: Github, href: "https://github.com/0xRizki" },
+                            { icon: Linkedin, href: "https://linkedin.com/in/0xRizki" },
+                            { icon: Twitter, href: "https://twitter.com/0xRizki" },
+                            { icon: Mail, href: "mailto:rizki@example.com" },
+                        ].map((social, i) => (
+                            <a
+                                key={i}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-[16px] border border-white/10 bg-white/[0.03] hover:border-primary/30 hover:bg-white/[0.06] transition-all group"
+                            >
+                                <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                            </a>
+                        ))}
+                    </div>
                 </motion.div>
             </div>
 

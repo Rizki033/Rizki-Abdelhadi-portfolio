@@ -30,7 +30,7 @@ const EducationSection = () => {
     ];
 
     return (
-        <section id="education" className="py-24 relative overflow-hidden">
+        <section id="education" className="py-16 md:py-24 relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

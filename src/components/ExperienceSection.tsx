@@ -41,7 +41,7 @@ const ExperienceSection = () => {
     ];
 
     return (
-        <section id="experience" className="py-24 relative">
+        <section id="experience" className="py-16 md:py-24 relative">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -11,7 +11,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 359 89% 66%;
+    --primary: 142 71% 45%;
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -23,11 +23,11 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 12%;
     --input: 240 3.7% 15.9%;
-    --ring: 359 89% 66%;
+    --ring: 142 71% 45%;
     --radius: 0.5rem;
-    --cyber-green: 359 89% 66%;
+    --cyber-green: 142 71% 45%;
     --cyber-cyan: 0 0% 85%;
-    --cyber-dim: 359 40% 10%;
+    --cyber-dim: 142 40% 10%;
   }
 }
 
@@ -41,7 +41,7 @@
     background-color: #0a0a0b;
     background-image:
       radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 28%),
-      radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.08), transparent 18%),
+      radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.08), transparent 18%),
       radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04), transparent 22%);
     background-attachment: fixed;
   }
@@ -54,7 +54,7 @@
 
 .card-glow:hover {
   box-shadow:
-    0 0 22px rgba(255, 107, 107, 0.08),
+    0 0 22px rgba(34, 197, 94, 0.08),
     0 0 40px rgba(255, 255, 255, 0.04);
   border-color: hsl(var(--primary) / 0.35);
 }
@@ -63,7 +63,7 @@
   background-image:
     radial-gradient(circle at 12% 28%, rgba(255, 255, 255, 0.55) 0 1.5px, transparent 2px),
     radial-gradient(circle at 76% 18%, rgba(255, 255, 255, 0.42) 0 1.5px, transparent 2px),
-    radial-gradient(circle at 64% 62%, rgba(255, 107, 107, 0.45) 0 4px, transparent 10px),
+    radial-gradient(circle at 64% 62%, rgba(34, 197, 94, 0.45) 0 4px, transparent 10px),
     radial-gradient(circle at 32% 78%, rgba(255, 255, 255, 0.35) 0 1.5px, transparent 2px),
     radial-gradient(circle at 88% 80%, rgba(255, 255, 255, 0.3) 0 1px, transparent 2px),
     radial-gradient(circle at 18% 52%, rgba(255, 255, 255, 0.34) 0 1px, transparent 2px);
