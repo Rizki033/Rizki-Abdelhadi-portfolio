@@ -39,22 +39,9 @@ const skillCategories: Category[] = [
       { label: "Exploit Research", docUrl: "https://www.exploit-db.com/", iconUrl: "https://cdn.simpleicons.org/rapid7/ff4d6d" },
       { label: "Email Security", docUrl: "https://www.google.com/search?q=email+security+SPF+DKIM+DMARC", iconUrl: "https://cdn.simpleicons.org/protonmail/a78bfa" },
       { label: "Security Reporting", docUrl: "https://www.google.com/search?q=security+report+writing+guide", iconUrl: "https://cdn.simpleicons.org/gitbook/a78bfa" },
+      { label: "Subdomain Enum", docUrl: "https://www.google.com/search?q=subdomain+enumeration+tools+guide", iconUrl: "https://cdn.simpleicons.org/amazonaws/4cc9f0" },
     ],
   },
-  // {
-  //   name: "Security Operations",
-  //   prefix: "$ ls ./Blue-Teaming/",
-  //   direction: "right",
-  //   skills: [
-  //     { label: "Bug Bounty", docUrl: "https://www.hackerone.com/resources", iconUrl: "https://cdn.simpleicons.org/hackerone/f4a261" },
-  //     { label: "Subdomain Enum", docUrl: "https://www.google.com/search?q=subdomain+enumeration+tools+guide", iconUrl: "https://cdn.simpleicons.org/amazonaws/4cc9f0" },
-  //     { label: "Burp Suite", docUrl: "https://portswigger.net/web-security", iconUrl: "https://cdn.simpleicons.org/burpsuite/FCAC0E" },
-  //     { label: "Network Security", docUrl: "https://www.google.com/search?q=network+security+documentation", iconUrl: "https://cdn.simpleicons.org/cisco/4cc9f0" },
-  //     { label: "Email Security", docUrl: "https://www.google.com/search?q=email+security+SPF+DKIM+DMARC", iconUrl: "https://cdn.simpleicons.org/protonmail/a78bfa" },
-  //     { label: "Exploit Research", docUrl: "https://www.exploit-db.com/", iconUrl: "https://cdn.simpleicons.org/rapid7/ff4d6d" },
-  //     { label: "Security Reporting", docUrl: "https://www.google.com/search?q=security+report+writing+guide", iconUrl: "https://cdn.simpleicons.org/gitbook/a78bfa" },
-  //   ],
-  // },
   {
     name: "Programming",
     prefix: "$ ls ./software-engineering-ai/",
