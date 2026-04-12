@@ -17,7 +17,7 @@ interface Category {
 const skillCategories: Category[] = [
   {
     name: "Offensive Security",
-    prefix: "$ ls ./Red-Teaming/",
+    prefix: "$ ls ./cyber-operations/",
     direction: "left",
     skills: [
       { label: "Penetration Testing", docUrl: "https://www.google.com/search?q=penetration+testing+documentation", iconUrl: "https://cdn.simpleicons.org/kalilinux/00ff88" },
@@ -37,25 +37,27 @@ const skillCategories: Category[] = [
       { label: "Auth Bypass", docUrl: "https://owasp.org/www-project-web-security-testing-guide/", iconUrl: "https://cdn.simpleicons.org/auth0/ff4d6d" },
       { label: "Bug Bounty", docUrl: "https://www.hackerone.com/resources", iconUrl: "https://cdn.simpleicons.org/hackerone/f4a261" },
       { label: "Exploit Research", docUrl: "https://www.exploit-db.com/", iconUrl: "https://cdn.simpleicons.org/rapid7/ff4d6d" },
-    ],
-  },
-  {
-    name: "Security Operations",
-    prefix: "$ ls ./Blue-Teaming/",
-    direction: "right",
-    skills: [
-      { label: "Bug Bounty", docUrl: "https://www.hackerone.com/resources", iconUrl: "https://cdn.simpleicons.org/hackerone/f4a261" },
-      { label: "Subdomain Enum", docUrl: "https://www.google.com/search?q=subdomain+enumeration+tools+guide", iconUrl: "https://cdn.simpleicons.org/amazonaws/4cc9f0" },
-      { label: "Burp Suite", docUrl: "https://portswigger.net/web-security", iconUrl: "https://cdn.simpleicons.org/burpsuite/FCAC0E" },
-      { label: "Network Security", docUrl: "https://www.google.com/search?q=network+security+documentation", iconUrl: "https://cdn.simpleicons.org/cisco/4cc9f0" },
       { label: "Email Security", docUrl: "https://www.google.com/search?q=email+security+SPF+DKIM+DMARC", iconUrl: "https://cdn.simpleicons.org/protonmail/a78bfa" },
-      { label: "Exploit Research", docUrl: "https://www.exploit-db.com/", iconUrl: "https://cdn.simpleicons.org/rapid7/ff4d6d" },
       { label: "Security Reporting", docUrl: "https://www.google.com/search?q=security+report+writing+guide", iconUrl: "https://cdn.simpleicons.org/gitbook/a78bfa" },
     ],
   },
+  // {
+  //   name: "Security Operations",
+  //   prefix: "$ ls ./Blue-Teaming/",
+  //   direction: "right",
+  //   skills: [
+  //     { label: "Bug Bounty", docUrl: "https://www.hackerone.com/resources", iconUrl: "https://cdn.simpleicons.org/hackerone/f4a261" },
+  //     { label: "Subdomain Enum", docUrl: "https://www.google.com/search?q=subdomain+enumeration+tools+guide", iconUrl: "https://cdn.simpleicons.org/amazonaws/4cc9f0" },
+  //     { label: "Burp Suite", docUrl: "https://portswigger.net/web-security", iconUrl: "https://cdn.simpleicons.org/burpsuite/FCAC0E" },
+  //     { label: "Network Security", docUrl: "https://www.google.com/search?q=network+security+documentation", iconUrl: "https://cdn.simpleicons.org/cisco/4cc9f0" },
+  //     { label: "Email Security", docUrl: "https://www.google.com/search?q=email+security+SPF+DKIM+DMARC", iconUrl: "https://cdn.simpleicons.org/protonmail/a78bfa" },
+  //     { label: "Exploit Research", docUrl: "https://www.exploit-db.com/", iconUrl: "https://cdn.simpleicons.org/rapid7/ff4d6d" },
+  //     { label: "Security Reporting", docUrl: "https://www.google.com/search?q=security+report+writing+guide", iconUrl: "https://cdn.simpleicons.org/gitbook/a78bfa" },
+  //   ],
+  // },
   {
     name: "Programming",
-    prefix: "$ ls ./DevSecOps-Programming/",
+    prefix: "$ ls ./software-engineering-ai/",
     direction: "left",
     skills: [
       { label: "Python", docUrl: "https://docs.python.org/3/", iconUrl: "https://cdn.simpleicons.org/python/4cc9f0" },
@@ -74,11 +76,18 @@ const skillCategories: Category[] = [
       { label: "Spring Boot", docUrl: "https://spring.io/projects/spring-boot", iconUrl: "https://cdn.simpleicons.org/springboot/24FA24" },
       { label: "Git", docUrl: "https://git-scm.com/doc", iconUrl: "https://cdn.simpleicons.org/git/f4a261" },
       { label: "GitHub", docUrl: "https://docs.github.com/en", iconUrl: "https://cdn.simpleicons.org/github/ffffff" },
+      { label: "Deep Learning", docUrl: "https://www.deeplearning.ai/", iconUrl: "https://cdn.simpleicons.org/tensorflow/a78bfa" },
+      { label: "PyTorch", docUrl: "https://pytorch.org/docs/", iconUrl: "https://cdn.simpleicons.org/pytorch/f4a261" },
+      { label: "Computer Vision", docUrl: "https://opencv.org/documentation/", iconUrl: "https://cdn.simpleicons.org/opencv/4cc9f0" },
+      { label: "CNNs", docUrl: "https://www.google.com/search?q=convolutional+neural+networks+documentation", iconUrl: "https://cdn.simpleicons.org/keras/a78bfa" },
+      { label: "Jupyter", docUrl: "https://docs.jupyter.org/", iconUrl: "https://cdn.simpleicons.org/jupyter/f4a261" },
+      { label: "Data Analysis", docUrl: "https://pandas.pydata.org/docs/", iconUrl: "https://cdn.simpleicons.org/pandas/00ff88" },
+      { label: "Medical Imaging", docUrl: "https://www.google.com/search?q=medical+imaging+AI+documentation", iconUrl: "https://cdn.simpleicons.org/diagramsdotnet/ff4d6d" },
     ],
   },
   {
     name: "Systems & Networks",
-    prefix: "$ ls ./systems_infra/",
+    prefix: "$ ls ./infrastructure-architecture/",
     direction: "right",
     skills: [
       { label: "Linux", docUrl: "https://www.kernel.org/doc/html/latest/", iconUrl: "https://cdn.simpleicons.org/linux/f4a261" },
@@ -91,20 +100,6 @@ const skillCategories: Category[] = [
       { label: "Network Automation", docUrl: "https://www.google.com/search?q=network+automation+ansible+documentation", iconUrl: "https://cdn.simpleicons.org/ansible/00ff88" },
     ],
   },
-  // {
-  //   name: "AI & Data",
-  //   prefix: "$ ls ./ai_research/",
-  //   direction: "left",
-  //   skills: [
-  //     { label: "Deep Learning", docUrl: "https://www.deeplearning.ai/", iconUrl: "https://cdn.simpleicons.org/tensorflow/a78bfa" },
-  //     { label: "PyTorch", docUrl: "https://pytorch.org/docs/", iconUrl: "https://cdn.simpleicons.org/pytorch/f4a261" },
-  //     { label: "Computer Vision", docUrl: "https://opencv.org/documentation/", iconUrl: "https://cdn.simpleicons.org/opencv/4cc9f0" },
-  //     { label: "CNNs", docUrl: "https://www.google.com/search?q=convolutional+neural+networks+documentation", iconUrl: "https://cdn.simpleicons.org/keras/a78bfa" },
-  //     { label: "Data Analysis", docUrl: "https://pandas.pydata.org/docs/", iconUrl: "https://cdn.simpleicons.org/pandas/00ff88" },
-  //     { label: "Jupyter", docUrl: "https://docs.jupyter.org/", iconUrl: "https://cdn.simpleicons.org/jupyter/f4a261" },
-  //     { label: "Medical Imaging", docUrl: "https://www.google.com/search?q=medical+imaging+AI+documentation", iconUrl: "https://cdn.simpleicons.org/diagramsdotnet/ff4d6d" },
-  //   ],
-  // },
 ];
 
 const SkillIcon = ({ skill }: { skill: Skill }) => {
