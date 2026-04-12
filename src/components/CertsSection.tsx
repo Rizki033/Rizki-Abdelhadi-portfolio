@@ -1,67 +1,26 @@
 import { motion } from "framer-motion";
-import { Award, Trophy, Flag } from "lucide-react";
+import { Trophy, Flag, ExternalLink } from "lucide-react";
+
+const issuerStyles: Record<string, { color: string; bg: string; label: string }> = {
+    "TryHackMe": { color: "#ff4d6d", bg: "#ff4d6d18", label: "THM" },
+    "SOCRadar": { color: "#f4a261", bg: "#f4a26118", label: "SOC" },
+    "Proofpoint": { color: "#4cc9f0", bg: "#4cc9f018", label: "PP" },
+    "Cisco": { color: "#4cc9f0", bg: "#4cc9f018", label: "CSC" },
+    "Cybrary": { color: "#a78bfa", bg: "#a78bfa18", label: "CBR" },
+    "Cisco Networking Academy": { color: "#4cc9f0", bg: "#4cc9f018", label: "CSC" },
+};
 
 const certifications = [
-    {
-        title: "Jr Penetration Tester",
-        issuer: "TryHackMe",
-        date: "Feb 2026",
-        icon: Award,
-    },
-    {
-        title: "Ransomware Defense Masterclass",
-        issuer: "SOCRadar",
-        date: "Jul 2025",
-        icon: Award,
-    },
-    {
-        title: "Mastering Cyber Threat Intelligence for SOC Analysts",
-        issuer: "SOCRadar",
-        date: "Jul 2025",
-        icon: Award,
-    },
-    {
-        title: "Certified Email Authentication Specialist",
-        issuer: "Proofpoint",
-        date: "Apr 2025",
-        icon: Award,
-    },
-    {
-        title: "Introduction to Cybersecurity",
-        issuer: "Cisco",
-        date: "Mar 2025",
-        icon: Award,
-    },
-    {
-        title: "CCNA: Automation and Programmability",
-        issuer: "Cybrary",
-        date: "Feb 2025",
-        icon: Award,
-    },
-    {
-        title: "Python Essentials 1",
-        issuer: "Cisco",
-        date: "Jan 2025",
-        icon: Award,
-    },
-    {
-        title: "Python",
-        issuer: "Cisco Networking Academy",
-        date: "Sep 2024",
-        icon: Award,
-    },
-    {
-        title: "Pre Security",
-        issuer: "TryHackMe",
-        date: "Nov 2024",
-        icon: Award,
-    },
-    {
-        title: "Introduction to Cyber Security",
-        issuer: "TryHackMe",
-        date: "Nov 2024",
-        icon: Award,
-    },
+    { title: "Jr Penetration Tester", issuer: "TryHackMe", date: "Feb 2026", url: "" },
+    { title: "Ransomware Defense Masterclass", issuer: "SOCRadar", date: "Jul 2025", url: "" },
+    { title: "Mastering Cyber Threat Intelligence for SOC Analysts", issuer: "SOCRadar", date: "Jul 2025", url: "" },
+    { title: "Certified Email Authentication Specialist", issuer: "Proofpoint", date: "Apr 2025", url: "" },
+    { title: "Introduction to Cybersecurity", issuer: "Cisco", date: "Mar 2025", url: "" },
+    { title: "CCNA: Automation and Programmability", issuer: "Cybrary", date: "Feb 2025", url: "" },
+    { title: "Python Essentials 1", issuer: "Cisco", date: "Jan 2025", url: "" },
+    { title: "Python", issuer: "Cisco Networking Academy", date: "Sep 2024", url: "" },
+    { title: "Pre Security", issuer: "TryHackMe", date: "Nov 2024", url: "" },
+    { title: "Introduction to Cyber Security", issuer: "TryHackMe", date: "Nov 2024", url: "" },
 ];
 
 const achievements = [
@@ -69,11 +28,15 @@ const achievements = [
         title: "1st Place Gold League",
         description: "Top 7% worldwide on TryHackMe",
         icon: Trophy,
+        color: "#f4a261",
+        bg: "#f4a26118",
     },
     {
         title: "Natas CTF Complete",
         description: "All 33 levels completed on OverTheWire",
         icon: Flag,
+        color: "#00ff88",
+        bg: "#00ff8818",
     },
 ];
 
@@ -88,31 +51,72 @@ const CertsSection = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="font-mono text-3xl font-bold mb-2">
-                        <span className="text-primary">~/</span>certifications
+                        <span className="text-primary">~/</span>
+                        <span className="text-[#e0e0ff]">certifications</span>
                     </h2>
-                    <div className="w-16 h-0.5 bg-primary/50 mb-10" />
+                    <div className="w-10 h-px bg-[#7b5ea730] mb-10" />
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                        {certifications.map((cert, i) => (
-                            <motion.div
-                                key={cert.title}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: i * 0.05 }}
-                                className="p-4 rounded-lg border border-primary/20 bg-primary/5 border-glow hover:bg-primary/10 transition-all cursor-default"
-                            >
-                                <cert.icon className="w-5 h-5 text-primary mb-2" />
-                                <h3 className="font-mono text-[11px] font-semibold text-foreground mb-1 leading-tight">{cert.title}</h3>
-                                <p className="text-[10px] text-muted-foreground">{cert.issuer} · {cert.date}</p>
-                            </motion.div>
-                        ))}
+                    {/* Cert Cards Grid */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 mb-12">
+                        {certifications.map((cert, i) => {
+                            const s = issuerStyles[cert.issuer] ?? { color: "#888", bg: "#88888818", label: "?" };
+                            return (
+                                <motion.a
+                                    key={cert.title}
+                                    href={cert.url || "#"}
+                                    target={cert.url ? "_blank" : undefined}
+                                    rel="noopener noreferrer"
+                                    initial={{ opacity: 0, y: 16 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                                    className="group relative flex flex-col p-4 rounded-xl border transition-all duration-200 cursor-pointer no-underline"
+                                    style={{
+                                        background: "#0d0d18",
+                                        borderColor: "#1e1e35",
+                                    }}
+                                    onMouseEnter={e => {
+                                        (e.currentTarget as HTMLElement).style.borderColor = s.color + "40";
+                                        (e.currentTarget as HTMLElement).style.background = "#0d1a10";
+                                    }}
+                                    onMouseLeave={e => {
+                                        (e.currentTarget as HTMLElement).style.borderColor = "#1e1e35";
+                                        (e.currentTarget as HTMLElement).style.background = "#0d0d18";
+                                    }}
+                                >
+                                    {/* Top row: issuer badge + external icon */}
+                                    <div className="flex items-start justify-between gap-2 mb-3">
+                                        <span
+                                            className="text-[10px] font-bold tracking-wider px-2 py-0.5 rounded"
+                                            style={{ background: s.bg, color: s.color }}
+                                        >
+                                            {s.label}
+                                        </span>
+                                        <ExternalLink
+                                            className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5"
+                                            style={{ color: "#00ff88" }}
+                                        />
+                                    </div>
+
+                                    {/* Title */}
+                                    <p className="font-mono text-[11px] font-semibold text-[#d0d0e8] leading-snug mb-2 flex-1">
+                                        {cert.title}
+                                    </p>
+
+                                    {/* Meta */}
+                                    <p className="text-[10px] text-neutral-600 font-mono">
+                                        {cert.issuer} · {cert.date}
+                                    </p>
+                                </motion.a>
+                            );
+                        })}
                     </div>
 
-                    <h3 className="font-mono text-xl font-bold mb-6">
-                        <span className="text-primary">#</span> Achievements
+                    {/* Achievements */}
+                    <h3 className="font-mono text-base font-bold mb-5 text-[#a78bfa]">
+                        # achievements
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                         {achievements.map((ach, i) => (
                             <motion.div
                                 key={ach.title}
@@ -120,12 +124,20 @@ const CertsSection = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="flex items-start gap-4 p-5 rounded-lg border border-border bg-card/30 backdrop-blur-sm card-glow"
+                                className="flex items-start gap-4 p-4 rounded-xl border"
+                                style={{ background: "#0d0a18", borderColor: ach.color + "30" }}
                             >
-                                <ach.icon className="w-6 h-6 text-cyber-cyan shrink-0 mt-0.5" />
+                                <div
+                                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                                    style={{ background: ach.bg, border: `1px solid ${ach.color}30` }}
+                                >
+                                    <ach.icon className="w-4 h-4" style={{ color: ach.color }} />
+                                </div>
                                 <div>
-                                    <h4 className="font-mono text-sm font-semibold text-foreground mb-1">{ach.title}</h4>
-                                    <p className="text-xs text-muted-foreground">{ach.description}</p>
+                                    <h4 className="font-mono text-xs font-semibold text-[#d0d0e8] mb-1">
+                                        {ach.title}
+                                    </h4>
+                                    <p className="text-[11px] text-neutral-600">{ach.description}</p>
                                 </div>
                             </motion.div>
                         ))}
