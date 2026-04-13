@@ -3,6 +3,12 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Autonomous-pentester",
+    description: "A research-oriented project exploring how Artificial Intelligence can enhance and automate offensive security operations and red team activities.",
+    tags: ["AI", "Red Teaming", "Offensive Security"],
+    github: "https://github.com/Rizki033/Autonomous-pentester",
+  },
+  {
     title: "oneSec",
     description: "All-in-one bash-based security tools installer and manager with 18+ pre-configured penetration testing tools and interactive terminal UI.",
     tags: ["Bash", "Security", "CLI"],
