@@ -50,11 +50,13 @@ const CertsSection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="font-mono text-3xl font-bold mb-2">
-                        <span className="text-primary">~/</span>
-                        <span className="text-[#e0e0ff]">certifications</span>
-                    </h2>
-                    <div className="w-10 h-px bg-[#7b5ea730] mb-10" />
+                    <div className="text-center mb-12">
+                        <h2 className="font-mono text-3xl md:text-4xl font-bold text-white mb-2">
+                            <span className="text-primary">~/</span>Certifications
+                            <span className="text-[#a78bfa]"></span>
+                        </h2>
+                        <div className="w-16 h-0.5 bg-primary/50 mx-auto mt-4" />
+                    </div>
 
                     {/* Cert Cards Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 mb-12">

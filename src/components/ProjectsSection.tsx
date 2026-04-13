@@ -54,10 +54,13 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-mono text-3xl font-bold mb-2">
-            <span className="text-primary">~/</span>projects
-          </h2>
-          <div className="w-16 h-0.5 bg-primary/50 mb-10" />
+          <div className="text-center mb-12">
+            <h2 className="font-mono text-3xl md:text-4xl font-bold text-white mb-2">
+              <span className="text-primary">~/</span>Projects
+              <span className="text-[#a78bfa]"></span>
+            </h2>
+            <div className="w-16 h-0.5 bg-primary/50 mx-auto mt-4" />
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {projects.map((project, i) => (

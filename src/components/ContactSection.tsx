@@ -11,10 +11,13 @@ const ContactSection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="font-mono text-3xl font-bold mb-2">
-                        <span className="text-primary">~/</span>contact
-                    </h2>
-                    <div className="w-16 h-0.5 bg-primary/50 mb-12" />
+                    <div className="text-center mb-12">
+                        <h2 className="font-mono text-3xl md:text-4xl font-bold text-white mb-2">
+                            <span className="text-primary">~/</span>Contact
+                            <span className="text-[#a78bfa]"></span>
+                        </h2>
+                        <div className="w-16 h-0.5 bg-primary/50 mx-auto mt-4" />
+                    </div>
 
                     <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div className="space-y-8">
