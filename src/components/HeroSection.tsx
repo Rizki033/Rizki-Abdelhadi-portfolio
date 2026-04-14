@@ -74,7 +74,7 @@ const HeroSection = () => {
                             { icon: Github, href: "https://github.com/0xRizki" },
                             { icon: Linkedin, href: "https://linkedin.com/in/0xRizki" },
                             { icon: Twitter, href: "https://twitter.com/0xRizki" },
-                            { icon: Mail, href: "mailto:rizki@example.com" },
+                            { icon: Mail, href: "mailto:rizkiabdelhadi4@gmail.com" },
                         ].map((social, i) => (
                             <a
                                 key={i}

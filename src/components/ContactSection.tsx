@@ -31,7 +31,7 @@ const ContactSection = () => {
                                     {[
                                         { icon: Mail, label: "Email", value: "rizkiabdelhadi4@gmail.com" },
                                         { icon: Phone, label: "Phone", value: "+212659030899" },
-                                        { icon: MapPin, label: "Location", value: "Rabat, Morocco" },
+                                        { icon: MapPin, label: "Location", value: "Marrakech, Morocco" },
                                     ].map((item) => (
                                         <div key={item.label} className="flex items-center gap-4">
                                             <div className="p-3 rounded-lg bg-primary/5 text-primary">
