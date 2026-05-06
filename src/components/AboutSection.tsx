@@ -298,7 +298,7 @@ const AboutSection = () => {
                 {
                   icon: Users,
                   label: "community",
-                  value: "GDG Marrakech Member & DevFest 2025 Volunteer",
+                  value: "GDG Marrakech Member & CSC Club Member",
                 },
               ].map((item) => (
                 <div

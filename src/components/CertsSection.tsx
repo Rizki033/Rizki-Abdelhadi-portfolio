@@ -11,13 +11,14 @@ const issuerStyles: Record<string, { color: string; bg: string; label: string }>
 };
 
 const certifications = [
-    { title: "Jr Penetration Tester", issuer: "TryHackMe", date: "Feb 2026", url: "" },
-    { title: "Ransomware Defense Masterclass", issuer: "SOCRadar", date: "Jul 2025", url: "" },
-    { title: "Mastering Cyber Threat Intelligence for SOC Analysts", issuer: "SOCRadar", date: "Jul 2025", url: "" },
-    { title: "Certified Email Authentication Specialist", issuer: "Proofpoint", date: "Apr 2025", url: "" },
-    { title: "Introduction to Cybersecurity", issuer: "Cisco", date: "Mar 2025", url: "" },
-    { title: "CCNA: Automation and Programmability", issuer: "Cybrary", date: "Feb 2025", url: "" },
-    { title: "Python Essentials 1", issuer: "Cisco", date: "Jan 2025", url: "" },
+    { title: "Ethical Hacker", issuer: "Cisco", date: "May 2026", url: "https://www.credly.com/badges/06ec8462-385d-4989-9db7-f11fba15681a/public_url" },
+    { title: "Jr Penetration Tester", issuer: "TryHackMe", date: "Feb 2026", url: "https://tryhackme.com/certificate/THM-S3LRB8724U" },
+    { title: "Ransomware Defense Masterclass", issuer: "SOCRadar", date: "Jul 2025", url: "https://credsverse.com/credentials/dc6384e6-2920-46ff-b2f1-0aef9ab1c826?preview=1" },
+    { title: "Mastering Cyber Threat Intelligence for SOC Analysts", issuer: "SOCRadar", date: "Jul 2025", url: "https://credsverse.com/credentials/3b0c8b7f-223f-4f93-a1c9-c3e083141e42?preview=2" },
+    { title: "Certified Email Authentication Specialist", issuer: "Proofpoint", date: "Apr 2025", url: "https://www.credly.com/badges/68b5fe7a-e1af-41ba-962f-022a414bf4a2/linked_in_profile" },
+    { title: "Introduction to Cybersecurity", issuer: "Cisco", date: "Mar 2025", url: "https://www.credly.com/badges/7b687211-0909-4ba1-943a-875f70f56ea2/linked_in_profile" },
+    { title: "CCNA: Automation and Programmability", issuer: "Cybrary", date: "Feb 2025", url: "https://app.cybrary.it/profile/CooperativeMockingbird3528?tab=badges" },
+    { title: "Python Essentials 1", issuer: "Cisco", date: "Jan 2025", url: "https://www.credly.com/badges/b0164192-1158-42f7-a33e-e479b31fbdfb/linked_in_profile" },
     { title: "Python", issuer: "Cisco Networking Academy", date: "Sep 2024", url: "" },
     { title: "Pre Security", issuer: "TryHackMe", date: "Nov 2024", url: "" },
     { title: "Introduction to Cyber Security", issuer: "TryHackMe", date: "Nov 2024", url: "" },
@@ -26,7 +27,7 @@ const certifications = [
 const achievements = [
     {
         title: "1st Place Gold League",
-        description: "Top 7% worldwide on TryHackMe",
+        description: "Top 6% worldwide on TryHackMe",
         icon: Trophy,
         color: "#f4a261",
         bg: "#f4a26118",
@@ -38,6 +39,20 @@ const achievements = [
         color: "#00ff88",
         bg: "#00ff8818",
     },
+    {
+        title: "Top 10 – Knights of the Fury CTF",
+        description: "8ème place sur 100 équipes avec S4M_Hack – 24h de challenges intensifs en cybersécurité (Web, Crypto, OSINT, Reverse, IoT…).",
+        icon: Trophy,
+        color: "#FFD700",
+        bg: "#FFD70018",
+    },
+    {
+        title: "Official CTF Player – SOC4M",
+        description: "Active CTF player officially representing team SOC4M, participating in cybersecurity competitions and solving challenges across multiple domains.",
+        icon: Flag,
+        color: "#00c2ff",
+        bg: "#00c2ff18",
+    }
 ];
 
 const CertsSection = () => {
