@@ -63,7 +63,7 @@ const experience: ExpEntry[] = [
   {
     title: "Cybersecurity CTF Player | Red Team Practice",
     organization: "TryHackMe",
-    period: "janv. 2025 – Present · 1 an 4 mois",
+    period: "janv. 2025 – Present · 1 an 5 mois",
     location: "Remote · Temps partiel",
     contract: "Temps partiel",
     missions: [
