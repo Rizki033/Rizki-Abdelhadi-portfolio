@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 
 import NavLink from "./NavLink";
+import { useTheme } from "../hooks/use-theme";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,8 +39,8 @@ const Navbar = () => {
         <nav className="fixed top-0 left-0 w-full z-50 px-4 pt-4 md:px-6 md:pt-5">
             <div
                 className={`mx-auto flex w-full max-w-4xl items-center justify-between rounded-[20px] border px-4 py-3 transition-all duration-300 md:px-6 ${isScrolled
-                    ? "border-white/10 bg-[#151518]/88 shadow-[0_20px_60px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
-                    : "border-white/8 bg-[#151518]/72 shadow-[0_14px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl"
+                    ? "border-border/80 bg-background/85 shadow-[0_20px_60px_rgba(15,23,42,0.18)] backdrop-blur-2xl"
+                    : "border-border/60 bg-background/72 shadow-[0_14px_40px_rgba(15,23,42,0.12)] backdrop-blur-xl"
                     }`}
             >
                 <a href="#" className="flex items-center gap-3 group shrink-0">
@@ -57,21 +59,43 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                <a
-                    href="#contact"
-                    className="hidden md:inline-flex items-center gap-2 rounded-[14px] border border-primary/25 bg-primary/[0.08] px-4 py-2 text-sm text-primary transition-all hover:border-primary/45 hover:bg-primary/[0.12]"
-                >
-                    <span>Let's talk</span>
-                    <ArrowUpRight className="h-4 w-4" />
-                </a>
+                <div className="hidden md:flex items-center gap-3">
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className="inline-flex items-center gap-2 rounded-[14px] border border-border bg-card/70 px-3 py-2 text-sm text-foreground/80 transition-all hover:border-primary/35 hover:text-primary"
+                        aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                    >
+                        {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                        <span>{theme === "dark" ? "Light" : "Dark"}</span>
+                    </button>
+
+                    <a
+                        href="#contact"
+                        className="inline-flex items-center gap-2 rounded-[14px] border border-primary/25 bg-primary/[0.08] px-4 py-2 text-sm text-primary transition-all hover:border-primary/45 hover:bg-primary/[0.12]"
+                    >
+                        <span>Let's talk</span>
+                        <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                </div>
 
                 {/* Mobile Toggle */}
-                <button
-                    className="md:hidden rounded-[14px] border border-white/10 bg-white/[0.04] p-2 text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X /> : <Menu />}
-                </button>
+                <div className="flex items-center gap-2 md:hidden">
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className="rounded-[14px] border border-border bg-card/70 p-2 text-foreground hover:text-primary transition-colors"
+                        aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                    >
+                        {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                    </button>
+                    <button
+                        className="rounded-[14px] border border-border bg-card/70 p-2 text-foreground hover:text-primary transition-colors"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X /> : <Menu />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
@@ -82,7 +106,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-x-4 top-[88px] rounded-[28px] border border-white/10 bg-[#121214]/95 backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center gap-8 px-6 py-10"
+                        className="fixed inset-x-4 top-[88px] rounded-[28px] border border-border bg-background/95 backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center gap-8 px-6 py-10"
                     >
                         {navLinks.map((link) => (
                             <NavLink
@@ -94,6 +118,17 @@ const Navbar = () => {
                                 {link.name}
                             </NavLink>
                         ))}
+                        <button
+                            type="button"
+                            onClick={() => {
+                                toggleTheme();
+                                setIsMobileMenuOpen(false);
+                            }}
+                            className="inline-flex items-center gap-2 rounded-[14px] border border-border bg-card/70 px-5 py-2.5 text-sm text-foreground/80 transition-all hover:border-primary/35 hover:text-primary"
+                        >
+                            {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                            <span>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
+                        </button>
                         <a
                             href="#cv"
                             onClick={() => setIsMobileMenuOpen(false)}

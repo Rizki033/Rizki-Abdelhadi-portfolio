@@ -18,10 +18,10 @@ const NotFound = () => {
       <div className="fixed inset-0 cyber-grid pointer-events-none opacity-20" />
       <div className="fixed inset-0 scanline pointer-events-none opacity-60" />
 
-      <div className="text-center relative z-10 p-8 border border-border bg-black/60 rounded-xl backdrop-blur-sm" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+      <div className="text-center relative z-10 p-8 border border-border bg-card/75 rounded-xl backdrop-blur-sm shadow-[0_18px_60px_rgba(15,23,42,0.12)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
         <h1 className="text-6xl font-bold text-primary mb-4">404</h1>
-        <p className="text-xl text-neutral-400 mb-6">Error: System Not Found</p>
-        <div className="text-sm text-neutral-500 mb-8 max-w-md mx-auto">
+        <p className="text-xl text-muted-foreground mb-6">Error: System Not Found</p>
+        <div className="text-sm text-muted-foreground/80 mb-8 max-w-md mx-auto">
           The requested resource <span className="text-red-400">{location.pathname}</span> could not be located on this server.
         </div>
         <Link 

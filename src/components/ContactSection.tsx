@@ -12,7 +12,7 @@ const ContactSection = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="text-center mb-12">
-                        <h2 className="font-mono text-3xl md:text-4xl font-bold text-white mb-2">
+                        <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mb-2">
                             <span className="text-primary">~/</span>Contact
                             <span className="text-[#a78bfa]"></span>
                         </h2>

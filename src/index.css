@@ -29,6 +29,31 @@
     --cyber-cyan: 0 0% 85%;
     --cyber-dim: 142 40% 10%;
   }
+
+  .light {
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 142 71% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 40%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 88%;
+    --input: 214 32% 92%;
+    --ring: 142 71% 38%;
+    --cyber-green: 142 71% 38%;
+    --cyber-cyan: 160 30% 24%;
+    --cyber-dim: 210 36% 92%;
+  }
 }
 
 @layer base {
@@ -44,6 +69,14 @@
       radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.08), transparent 18%),
       radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04), transparent 22%);
     background-attachment: fixed;
+  }
+
+  .light body {
+    background-color: #f8fbf9;
+    background-image:
+      radial-gradient(circle at top, rgba(15, 23, 42, 0.04), transparent 30%),
+      radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.08), transparent 16%),
+      radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.03), transparent 18%);
   }
 }
 
@@ -70,11 +103,27 @@
   background-repeat: no-repeat;
 }
 
+.light .starfield {
+  background-image:
+    radial-gradient(circle at 12% 28%, rgba(15, 23, 42, 0.14) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 76% 18%, rgba(21, 128, 61, 0.14) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 64% 62%, rgba(34, 197, 94, 0.18) 0 4px, transparent 10px),
+    radial-gradient(circle at 32% 78%, rgba(15, 23, 42, 0.08) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 88% 80%, rgba(15, 23, 42, 0.08) 0 1px, transparent 2px),
+    radial-gradient(circle at 18% 52%, rgba(21, 128, 61, 0.1) 0 1px, transparent 2px);
+}
+
 .cyber-grid {
   background-size: 72px 72px;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.light .cyber-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
 }
 
 @keyframes cyber-scanline {
@@ -102,4 +151,13 @@
   );
   animation: cyber-scanline 16s linear infinite;
   pointer-events: none;
+}
+
+.light .scanline::after {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(34, 197, 94, 0.02),
+    transparent
+  );
 }

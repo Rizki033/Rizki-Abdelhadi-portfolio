@@ -201,7 +201,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-white mb-3">
+          <h2 className="text-4xl font-bold text-foreground mb-3">
             Skills <span className="text-primary">&</span> Expertise
             <span className="text-[#a78bfa]">.</span>
           </h2>

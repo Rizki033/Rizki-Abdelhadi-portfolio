@@ -15,9 +15,9 @@ interface ExpEntry {
 
 const experience: ExpEntry[] = [
   {
-    title: "Ingenieur Cybersecurite Junior",
+    title: "Étudiant en Cybersécurité - Programme SkillUp IT 2026",
     organization: "EMAN Aerospace",
-    period: "mars 2026 – Present · 2 mois",
+    period: "mars 2026 – A distance · 3 mois",
     location: "Marrakech, Maroc · A distance",
     contract: "Contrat en alternance",
     description:
@@ -141,7 +141,7 @@ const ExperienceCard = ({
       <div className="flex-1 min-w-0">
         {/* Title — large and clear */}
         <h4
-          className="text-base font-bold text-white leading-snug mb-1"
+          className="text-base font-bold text-foreground leading-snug mb-1"
           style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
           {entry.title}
@@ -208,7 +208,7 @@ const ExperienceSection = () => {
           {/* Page title */}
           <div className="text-center mb-12 md:mb-16">
             <h2
-              className="text-3xl md:text-4xl font-bold text-white mb-3"
+              className="text-3xl md:text-4xl font-bold text-foreground mb-3"
               style={{ fontFamily: "'JetBrains Mono', monospace" }}
             >
               <span className="text-primary">~/</span>Experience
@@ -229,7 +229,7 @@ const ExperienceSection = () => {
                   <Briefcase className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                  <h3 className="text-xl font-bold text-foreground" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                     Work
                   </h3>
                   <p className="text-sm text-muted-foreground">{experience.length} positions</p>
@@ -256,7 +256,7 @@ const ExperienceSection = () => {
                   <Heart className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                  <h3 className="text-xl font-bold text-foreground" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                     Volunteering
                   </h3>
                   <p className="text-sm text-muted-foreground">{volunteering.length} position</p>

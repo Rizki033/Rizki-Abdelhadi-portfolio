@@ -266,7 +266,7 @@ const AboutSection = () => {
           {/* Centered title */}
           <div className="text-center mb-10 md:mb-12">
             <h2
-              className="text-3xl md:text-4xl font-bold text-white mb-3"
+              className="text-3xl md:text-4xl font-bold text-foreground mb-3"
               style={{ fontFamily: "'JetBrains Mono', monospace" }}
             >
               <span className="text-primary">~/</span>About
