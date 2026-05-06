@@ -122,22 +122,22 @@ interface HackerLine {
 
 const HACKER_LINES: HackerLine[] = [
   { type: "prompt", cmd: "whoami", delay: 0 },
-  { type: "output", out: "0xRizki -- cybersecurity engineer & ethical hacker", color: "text-green-400", delay: 500 },
+  { type: "output", out: "Rizki Abdelhadi -- cybersecurity engineer & Security Researcher", color: "text-green-400", delay: 500 },
   { type: "blank", delay: 700 },
   { type: "prompt", cmd: "cat about.txt", delay: 900 },
   { type: "blank", delay: 1400 },
-  { type: "output", out: "Passionate about protecting the digital world.", color: "text-foreground/80", delay: 1500 },
-  { type: "output", out: "Specializing in:", color: "text-foreground/80", delay: 1700 },
+  { type: "output", out: "Passionate about protecting the digital world.", color: "text-slate-200", delay: 1500 },
+  { type: "output", out: "Specializing in:", color: "text-slate-300", delay: 1700 },
   { type: "output", out: "  [+] ethical hacking", color: "text-primary", delay: 1900 },
   { type: "output", out: "  [+] information systems security", color: "text-primary", delay: 2100 },
   { type: "output", out: "  [+] threat analysis & AI integration", color: "text-primary", delay: 2300 },
   { type: "blank", delay: 2450 },
-  { type: "output", out: "Goal: design intelligent tools to anticipate, detect & mitigate cyber attacks", color: "text-foreground/60", delay: 2550 },
+  { type: "output", out: "Goal: design intelligent tools to anticipate, detect & mitigate cyber attacks", color: "text-slate-400", delay: 2550 },
   // { type: "output", out: "detect & mitigate cyber attacks.", color: "text-foreground/60", delay: 2750 },
   { type: "blank", delay: 2950 },
   { type: "prompt", cmd: "nmap -sV --open target.htb", delay: 3100 },
   { type: "output", out: "Starting Nmap 7.94 ...", color: "text-yellow-400/80", delay: 3700 },
-  { type: "output", out: "PORT     STATE  SERVICE   VERSION", color: "text-neutral-400", delay: 3900 },
+  { type: "output", out: "PORT     STATE  SERVICE   VERSION", color: "text-slate-400", delay: 3900 },
   { type: "output", out: "22/tcp   open   ssh       OpenSSH 8.9", color: "text-green-400", delay: 4050 },
   { type: "output", out: "80/tcp   open   http      Apache 2.4.52", color: "text-green-400", delay: 4150 },
   { type: "output", out: "443/tcp  open   https     nginx 1.18", color: "text-green-400", delay: 4250 },
@@ -160,7 +160,7 @@ const PromptLine = ({
     <span className="text-green-400">{"㉿kali)-[~]"}</span>
     <br />
     <span className="text-green-400">{"└─$ "}</span>
-    <span className="text-white">{cmd}</span>
+    <span className="text-slate-100">{cmd}</span>
     {isLast && (
       <span
         className="inline-block w-2 h-3 bg-primary ml-0.5 align-middle"
@@ -214,7 +214,7 @@ const TypingTerminal = () => {
         <span className="w-3 h-3 rounded-full bg-red-500" />
         <span className="w-3 h-3 rounded-full bg-yellow-400" />
         <span className="w-3 h-3 rounded-full bg-green-500" />
-        <span className="flex-1 text-center text-xs text-muted-foreground">
+        <span className="flex-1 text-center text-xs text-slate-500">
           0xRizki@kali ~ bash
         </span>
       </div>
@@ -241,7 +241,7 @@ const TypingTerminal = () => {
           }
 
           return (
-            <div key={idx} className={`text-xs leading-5 ${line.color ?? "text-neutral-400"}`}>
+            <div key={idx} className={`text-xs leading-5 ${line.color ?? "text-slate-400"}`}>
               {line.out}
             </div>
           );
