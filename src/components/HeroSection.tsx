@@ -52,8 +52,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="max-w-2xl mx-auto text-muted-foreground/80 leading-relaxed mb-10 text-sm md:text-lg"
                 >
-                    I build a cybersecurity profile around offensive thinking, secure engineering,
-                    and clear execution, with a portfolio designed to feel sharp, calm, and intentional.
+                    Building a strong cybersecurity profile through security research, secure engineering, and practical projects focused on innovation, resilience, and continuous learning.
                 </motion.p>
 
                 <motion.div
@@ -71,9 +70,9 @@ const HeroSection = () => {
                     </a>
                     <div className="flex items-center justify-center gap-3">
                         {[
-                            { icon: Github, href: "https://github.com/0xRizki" },
-                            { icon: Linkedin, href: "https://linkedin.com/in/0xRizki" },
-                            { icon: Twitter, href: "https://twitter.com/0xRizki" },
+                            { icon: Github, href: "https://github.com/Rizki033" },
+                            { icon: Linkedin, href: "https://www.linkedin.com/in/abdelhadi-rizki/" },
+                            { icon: Twitter, href: "https://x.com/Rizki40109" },
                             { icon: Mail, href: "mailto:rizkiabdelhadi4@gmail.com" },
                         ].map((social, i) => (
                             <a

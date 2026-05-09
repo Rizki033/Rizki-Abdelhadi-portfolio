@@ -78,7 +78,7 @@ const ContactSection = () => {
                                 type="submit"
                                 className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-mono font-bold text-xs tracking-widest hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group border-glow shadow-lg shadow-primary/20"
                             >
-                                INITIALIZE_TRANSMISSION <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                CONNECT <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
                         </form>
                     </div>
