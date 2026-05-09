@@ -79,19 +79,51 @@ const experience: ExpEntry[] = [
 
 const volunteering: ExpEntry[] = [
   {
-    title: "Member & DevFest 2025 Volunteer",
+    title: "Member",
     organization: "Google Developer Groups Marrakesh",
     period: "Dec 2025 – Present",
-    location: "Marrakech, Maroc",
-    contract: "Benevole",
+    location: "Marrakesh, Morocco",
+    contract: "Member",
     description:
-      "Contributing to tech community events, organizing workshops, and supporting DevFest 2025 as a volunteer.",
+      "Active member of the local developer community, participating in events, technical sessions, and community-building initiatives.",
     missions: [
-      "Organisation d'ateliers techniques et d'evenements communautaires.",
-      "Support logistique et animation pendant DevFest 2025.",
-      "Facilitation de sessions networking entre developpeurs.",
+      "Participating in community events and technical meetups.",
+      "Engaging with developers through knowledge-sharing and networking sessions.",
+      "Supporting the growth of the local tech community through active involvement.",
     ],
-    skills: ["Community Building", "Event Management", "Public Speaking"],
+    skills: ["Community Building", "Networking", "Tech Community Engagement"],
+    logoUrl: "https://cdn.simpleicons.org/googledevelopers/4285F4",
+  },
+  {
+    title: "DevFest 2025 Volunteer",
+    organization: "Google Developer Groups Marrakesh",
+    period: "2025",
+    location: "Marrakesh, Morocco",
+    contract: "Volunteer",
+    description:
+      "Supported the organization and on-site execution of DevFest 2025, helping create a smooth experience for attendees and speakers.",
+    missions: [
+      "Assisted with event logistics and attendee coordination.",
+      "Supported event flow during sessions and community activities.",
+      "Helped create an engaging and welcoming environment for participants.",
+    ],
+    skills: ["Event Management", "Team Collaboration", "Public Relations"],
+    logoUrl: "https://cdn.simpleicons.org/googledevelopers/4285F4",
+  },
+  {
+    title: "Build With AI 2026 Volunteer",
+    organization: "Google Developer Groups Marrakesh",
+    period: "2026",
+    location: "Marrakesh, Morocco",
+    contract: "Volunteer",
+    description:
+      "Contributed to the delivery of Build With AI 2026 by supporting community activities and helping coordinate the event experience.",
+    missions: [
+      "Helped with event preparation and volunteer coordination.",
+      "Supported workshops and AI-focused community sessions.",
+      "Assisted attendees and contributed to overall event operations.",
+    ],
+    skills: ["Event Support", "AI Community Engagement", "Coordination"],
     logoUrl: "https://cdn.simpleicons.org/googledevelopers/4285F4",
   },
 ];
@@ -259,7 +291,9 @@ const ExperienceSection = () => {
                   <h3 className="text-xl font-bold text-foreground" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
                     Volunteering
                   </h3>
-                  <p className="text-sm text-muted-foreground">{volunteering.length} position</p>
+                  <p className="text-sm text-muted-foreground">
+                    {volunteering.length} {volunteering.length === 1 ? "position" : "positions"}
+                  </p>
                 </div>
               </div>
 

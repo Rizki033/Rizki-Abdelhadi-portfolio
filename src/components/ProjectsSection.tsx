@@ -1,16 +1,18 @@
+import { Description } from "@radix-ui/react-toast";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Tags } from "lucide-react";
 
 const projects = [
   {
-    title: "Autonomous-pentester",
-    description: "A research-oriented project exploring how Artificial Intelligence can enhance and automate offensive security operations and red team activities.",
-    tags: ["AI", "Red Teaming", "Offensive Security"],
-    github: "https://github.com/Rizki033/Autonomous-pentester",
+    title: "PentAI",
+    description: "PentAI is an AI-powered security automation platform for reconnaissance, vulnerability discovery, pentesting operations, and offensive security workflows. ",
+    tags: ["AI", "Red Teaming", "Offensive Security","Python","JavaScript","HTML","CSS","Shell","ollama"],
+    github: "https://github.com/Rizki033/PentAI",
+    live: "https://pent-ai-rizki.lovable.app/",
   },
   {
     title: "oneSec",
-    description: "All-in-one bash-based security tools installer and manager with 18+ pre-configured penetration testing tools and interactive terminal UI.",
+    description: "All-in-one bash-based security tools installer and manager with 19+ pre-configured penetration testing tools and interactive terminal UI.",
     tags: ["Bash", "Security", "CLI"],
     github: "https://github.com/Rizki033/oneSec",
     stars: 3,
@@ -18,14 +20,14 @@ const projects = [
   {
     title: "NeuroScan AI",
     description: "AI-powered web application for automatic brain tumor detection from MRI images. Features secure authentication, encrypted data, and real-time AI analysis.",
-    tags: ["React.js", "FastAPI", "PyTorch", "PostgreSQL"],
+    tags: ["React.js","Python", "FastAPI", "PyTorch/ONNX", "PostgreSQL","HTML","CSS"],
     github: "https://github.com/Rizki033/Brain-Tumor-WebApp",
     stars: 2,
   },
   {
     title: "NetSentry AI",
     description: "AI-based DDoS attack detection system using machine learning to classify network traffic and identify malicious patterns in real-time.",
-    tags: ["Python", "Machine Learning", "Network Security"],
+    tags: ["Python", "Machine Learning", "Network Security","Pandas","Scikit-learn"],
     github: "https://github.com/Rizki033/NetSentry-AI",
     stars: 2,
   },
@@ -39,15 +41,27 @@ const projects = [
   {
     title: "Deep Learning Medical Imaging",
     description: "CNN model for brain tumor classification from MRI images with feature visualization, achieving high accuracy through 600 epochs of training.",
-    tags: ["PyTorch", "Deep Learning", "Medical AI"],
+    tags: ["PyTorch", "Deep Learning", "Medical AI","NumPy","Matplotlib","Seaborn","OpenCV","Scikit-learn"],
     github: "https://github.com/Rizki033/Deep-Learning-Model",
   },
   {
     title: "Ifrane CleanTech",
-    description: "Participatory digital solution for citizens to report waste problems in real-time, with a centralized municipal dashboard for optimized collection.",
-    tags: ["PHP", "Web App", "Civic Tech"],
+    description: "Ifrane CleanTech is a smart waste management platform that allows citizens to report waste issues in real time using GPS and photos.It helps municipalities optimize waste collection operations through centralized dashboards and data-driven monitoring.",
+    tags: ["PHP", "JavaScript", "MySQL","Laravel"],
     github: "https://github.com/Rizki033/Ifrane-CleanTech",
   },
+  {
+    title: "AI-Service",
+    description: "AI-Service is a FastAPI-based facial recognition API designed for smart student attendance management. It allows a mobile application to capture and send student photos for real-time identity verification and attendance tracking.",
+    tags: ["Python", "SQLite", "FastAPI", "OpenCV", "Face Recognition"],
+    github: "https://github.com/FSTG-Tracker/ai-service",
+  },
+  {
+    title: "CTF-Challenges-Solutions",
+    description: "A collection of Capture The Flag (CTF) challenges I’ve solved, covering topics like cryptography, web exploitation, reverse engineering, and more, along with detailed explanations",
+    tags: ["Python","Cryptography","Web Exploitation","OSINT","Reverse Engineering","Forensics","Ruby","Stegnography"],
+    github: "https://github.com/Rizki033/CTF-Challenges-Solutions",
+  }
 ];
 
 const ProjectsSection = () => {
@@ -82,14 +96,28 @@ const ProjectsSection = () => {
                   <h3 className="font-mono text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                  </a>
+                  <div className="flex items-center gap-2">
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit ${project.title} live website`}
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${project.title} on GitHub`}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                    </a>
+                  </div>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">
                   {project.description}
