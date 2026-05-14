@@ -30,7 +30,7 @@ const CVSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="mx-auto max-w-4xl rounded-[28px] border border-white/8 bg-[linear-gradient(180deg,rgba(24,24,27,0.88),rgba(14,14,16,0.96))] px-6 py-10 md:px-12 md:py-14 shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+                    className="mx-auto max-w-4xl rounded-[28px] border border-border bg-card/80 px-6 py-10 shadow-lg backdrop-blur-sm md:px-12 md:py-14 dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(24,24,27,0.88),rgba(14,14,16,0.96))] dark:shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
                 >
                     <div className="mx-auto max-w-2xl text-center">
                         <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.06] px-3 py-1 text-[11px] font-mono uppercase tracking-[0.24em] text-primary/85">
@@ -59,11 +59,11 @@ const CVSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.35, delay: index * 0.08 }}
-                                className="group rounded-[22px] border border-white/8 bg-white/[0.03] p-5 text-left transition-all hover:border-primary/30 hover:bg-white/[0.05] hover:shadow-[0_0_24px_rgba(255,107,107,0.08)]"
+                                className="group rounded-[22px] border border-border bg-muted/50 p-5 text-left transition-all hover:border-primary/40 hover:bg-primary/5 dark:border-white/8 dark:bg-white/[0.03] dark:hover:border-primary/30 dark:hover:bg-white/[0.05] dark:hover:shadow-[0_0_24px_rgba(255,107,107,0.08)]"
                             >
                                 <div className="flex items-center justify-between gap-4">
                                     <div className="flex items-center gap-4">
-                                        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3 text-foreground/85">
+                                        <div className="rounded-2xl border border-border bg-background/90 p-3 text-foreground dark:border-white/10 dark:bg-white/[0.03] dark:text-foreground/85">
                                             <resume.icon className="h-5 w-5" />
                                         </div>
                                         <div>

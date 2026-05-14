@@ -45,15 +45,15 @@ const EducationSection = () => {
                 >
                     <div className="text-center mb-12">
                         <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mb-2">
-                            <span className="text-emerald-300">~/</span>Education
-                            <span className="text-lime-200">.</span>
+                            <span className="text-primary">~/</span>Education
+                            <span className="text-[#a78bfa]">.</span>
                         </h2>
-                        <div className="w-16 h-0.5 bg-gradient-to-r from-emerald-300 via-green-300 to-lime-200 mx-auto mt-4" />
+                        <div className="w-16 h-0.5 bg-gradient-to-r from-primary via-emerald-500/80 to-violet-400/90 mx-auto mt-4" />
                     </div>
 
                     <div className="space-y-4 relative">
                         {/* Timeline Line */}
-                        <div className="absolute left-4 top-0 bottom-0 w-px bg-emerald-300/25 -z-10" />
+                        <div className="absolute left-4 top-0 bottom-0 w-px bg-primary/25 dark:bg-emerald-300/25 -z-10" />
 
                         {education.map((item, idx) => (
                             <motion.div
@@ -65,9 +65,9 @@ const EducationSection = () => {
                                 className="relative pl-12 group"
                             >
                                 {/* Timeline Node */}
-                                <div className="absolute left-2.5 top-6 w-3 h-3 rounded-full bg-background border-2 border-emerald-300 group-hover:scale-125 transition-transform" />
+                                <div className="absolute left-2.5 top-6 w-3 h-3 rounded-full bg-background border-2 border-primary dark:border-emerald-300 group-hover:scale-125 transition-transform" />
 
-                                <div className="p-6 rounded-xl border border-slate-200/10 bg-gradient-to-br from-slate-900/70 via-slate-950/70 to-slate-900/60 backdrop-blur-sm transition-all hover:border-emerald-300/30 hover:shadow-[0_18px_50px_rgba(52,211,153,0.10)]">
+                                <div className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm transition-all hover:border-primary/40 hover:bg-primary/5 dark:border-slate-200/10 dark:bg-gradient-to-br dark:from-slate-900/70 dark:via-slate-950/70 dark:to-slate-900/60 dark:hover:border-emerald-300/30 dark:hover:bg-transparent dark:hover:shadow-[0_18px_50px_rgba(52,211,153,0.10)]">
                                     <div className="flex items-start gap-4 flex-col md:flex-row">
                                         <a
                                             href={item.link}
@@ -76,7 +76,7 @@ const EducationSection = () => {
                                             className="block shrink-0 group/logo"
                                             title={`Visit ${item.school}`}
                                         >
-                                            <div className="w-16 h-16 rounded-lg overflow-hidden bg-white/5 border border-emerald-300/20 p-2 flex items-center justify-center group-hover/logo:border-emerald-300/50 group-hover/logo:bg-emerald-100/5 transition-all">
+                                            <div className="w-16 h-16 rounded-lg overflow-hidden bg-muted/60 border border-border p-2 flex items-center justify-center transition-all dark:bg-white/5 dark:border-emerald-300/20 group-hover/logo:border-primary/40 group-hover/logo:bg-primary/5 dark:group-hover/logo:border-emerald-300/50 dark:group-hover/logo:bg-emerald-100/5">
                                                 <img
                                                     src={item.logo}
                                                     alt={`${item.school} Logo`}
@@ -87,7 +87,7 @@ const EducationSection = () => {
                                                         target.parentElement?.classList.add('fallback-icon');
                                                     }}
                                                 />
-                                                <GraduationCap className="w-8 h-8 text-emerald-300 hidden group-[.fallback-icon]/logo:block" />
+                                                <GraduationCap className="w-8 h-8 text-primary dark:text-emerald-300 hidden group-[.fallback-icon]/logo:block" />
                                             </div>
                                         </a>
 
@@ -97,20 +97,20 @@ const EducationSection = () => {
                                                     href={item.link}
                                                     target={item.link !== "#" ? "_blank" : "_self"}
                                                     rel="noopener noreferrer"
-                                                    className="hover:text-emerald-200 transition-colors inline-block group/title"
+                                                    className="hover:text-primary transition-colors inline-block group/title dark:hover:text-emerald-200"
                                                 >
-                                                    <h3 className="text-lg font-bold text-foreground/90 group-hover/title:text-emerald-200 transition-colors underline-offset-4 decoration-emerald-300/40 decoration-1 group-hover/title:underline">{item.school}</h3>
+                                                    <h3 className="text-lg font-bold text-foreground group-hover/title:text-primary transition-colors underline-offset-4 decoration-primary/35 decoration-1 group-hover/title:underline dark:group-hover/title:text-emerald-200 dark:decoration-emerald-300/40">{item.school}</h3>
                                                 </a>
-                                                <span className="font-mono text-xs text-emerald-200/80">
+                                                <span className="font-mono text-xs text-muted-foreground dark:text-emerald-200/80">
                                                     {item.period}
                                                 </span>
                                             </div>
-                                            <h4 className="font-mono text-sm text-emerald-100/90 mb-4">{item.degree}</h4>
+                                            <h4 className="font-mono text-sm text-muted-foreground dark:text-emerald-100/90 mb-4">{item.degree}</h4>
 
                                             {item.tags.length > 0 && (
                                                 <div className="flex flex-wrap gap-2">
                                                     {item.tags.map(tag => (
-                                                        <span key={tag} className="px-2 py-1 text-xs font-mono border border-slate-200/10 bg-slate-800/70 text-slate-200 rounded hover:border-emerald-300/25 hover:text-emerald-100 transition-colors">
+                                                        <span key={tag} className="px-2 py-1 text-xs font-mono rounded border border-border bg-muted/80 text-muted-foreground transition-colors hover:border-primary/30 hover:text-foreground dark:border-slate-200/10 dark:bg-slate-800/70 dark:text-slate-200 dark:hover:border-emerald-300/25 dark:hover:text-emerald-100">
                                                             {tag}
                                                         </span>
                                                     ))}

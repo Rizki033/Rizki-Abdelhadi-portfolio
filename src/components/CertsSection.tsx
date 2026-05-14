@@ -87,19 +87,7 @@ const CertsSection = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: i * 0.05 }}
-                                    className="group relative flex flex-col p-4 rounded-xl border transition-all duration-200 cursor-pointer no-underline"
-                                    style={{
-                                        background: "#0d0d18",
-                                        borderColor: "#1e1e35",
-                                    }}
-                                    onMouseEnter={e => {
-                                        (e.currentTarget as HTMLElement).style.borderColor = s.color + "40";
-                                        (e.currentTarget as HTMLElement).style.background = "#0d1a10";
-                                    }}
-                                    onMouseLeave={e => {
-                                        (e.currentTarget as HTMLElement).style.borderColor = "#1e1e35";
-                                        (e.currentTarget as HTMLElement).style.background = "#0d0d18";
-                                    }}
+                                    className="group relative flex flex-col rounded-xl border border-border bg-card/70 p-4 no-underline backdrop-blur-sm transition-all duration-200 cursor-pointer hover:border-primary/40 hover:bg-primary/5 dark:border-[#1e1e35] dark:bg-[#0d0d18] dark:hover:border-primary/35 dark:hover:bg-[#0d1a10]"
                                 >
                                     {/* Top row: issuer badge + external icon */}
                                     <div className="flex items-start justify-between gap-2 mb-3">
@@ -109,19 +97,16 @@ const CertsSection = () => {
                                         >
                                             {s.label}
                                         </span>
-                                        <ExternalLink
-                                            className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5"
-                                            style={{ color: "#00ff88" }}
-                                        />
+                                        <ExternalLink className="mt-0.5 h-3 w-3 flex-shrink-0 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
                                     </div>
 
                                     {/* Title */}
-                                    <p className="font-mono text-[11px] font-semibold text-[#d0d0e8] leading-snug mb-2 flex-1">
+                                    <p className="mb-2 flex-1 font-mono text-[11px] font-semibold leading-snug text-foreground">
                                         {cert.title}
                                     </p>
 
                                     {/* Meta */}
-                                    <p className="text-[10px] text-neutral-600 font-mono">
+                                    <p className="font-mono text-[10px] text-muted-foreground">
                                         {cert.issuer} · {cert.date}
                                     </p>
                                 </motion.a>
@@ -130,7 +115,7 @@ const CertsSection = () => {
                     </div>
 
                     {/* Achievements */}
-                    <h3 className="font-mono text-base font-bold mb-5 text-[#a78bfa]">
+                    <h3 className="mb-5 font-mono text-base font-bold text-violet-600 dark:text-[#a78bfa]">
                         # achievements
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
@@ -141,20 +126,20 @@ const CertsSection = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="flex items-start gap-4 p-4 rounded-xl border"
-                                style={{ background: "#0d0a18", borderColor: ach.color + "30" }}
+                                className="flex items-start gap-4 rounded-xl border border-border bg-card/70 p-4 backdrop-blur-sm dark:bg-[#0d0a18]"
+                                style={{ borderColor: `${ach.color}35` }}
                             >
                                 <div
-                                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                                    style={{ background: ach.bg, border: `1px solid ${ach.color}30` }}
+                                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border"
+                                    style={{ background: ach.bg, borderColor: `${ach.color}45` }}
                                 >
-                                    <ach.icon className="w-4 h-4" style={{ color: ach.color }} />
+                                    <ach.icon className="h-4 w-4" style={{ color: ach.color }} />
                                 </div>
                                 <div>
-                                    <h4 className="font-mono text-xs font-semibold text-[#d0d0e8] mb-1">
+                                    <h4 className="mb-1 font-mono text-xs font-semibold text-foreground">
                                         {ach.title}
                                     </h4>
-                                    <p className="text-[11px] text-neutral-600">{ach.description}</p>
+                                    <p className="text-[11px] text-muted-foreground">{ach.description}</p>
                                 </div>
                             </motion.div>
                         ))}
