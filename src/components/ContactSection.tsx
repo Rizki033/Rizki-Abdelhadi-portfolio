@@ -46,9 +46,9 @@ const ContactSection = () => {
                                 </div>
                             </div>
 
-                            <div className="text-sm text-muted-foreground/60 font-mono italic p-4 border-l-2 border-primary/20">
+                            {/* <div className="text-sm text-muted-foreground/60 font-mono italic p-4 border-l-2 border-primary/20">
                                 &gt; Secure communication channel established. Send your transmission.
-                            </div>
+                            </div> */}
                         </div>
 
                         <form className="space-y-4">
