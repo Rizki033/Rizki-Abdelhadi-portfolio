@@ -78,7 +78,7 @@ const EducationSection = () => {
                                         >
                                             <div className="w-16 h-16 rounded-lg overflow-hidden bg-muted/60 border border-border p-2 flex items-center justify-center transition-all dark:bg-white/5 dark:border-emerald-300/20 group-hover/logo:border-primary/40 group-hover/logo:bg-primary/5 dark:group-hover/logo:border-emerald-300/50 dark:group-hover/logo:bg-emerald-100/5">
                                                 <img
-                                                    src={item.logo}
+                                                    src={`${import.meta.env.BASE_URL}${item.logo.replace(/^\//, "")}`}
                                                     alt={`${item.school} Logo`}
                                                     className="w-full h-full object-contain group-hover/logo:scale-110 transition-transform"
                                                     onError={(e) => {
