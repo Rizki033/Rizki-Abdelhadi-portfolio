@@ -14,13 +14,21 @@ interface Category {
   skills: Skill[];
 }
 
+
 const skillCategories: Category[] = [
   {
     name: "Offensive Security",
     prefix: "$ ls ./cyber-operations/",
     direction: "left",
     skills: [
+      { label: "Ghidra", docUrl: "https://ghidra-sre.org/", iconUrl: "https://raw.githubusercontent.com/NationalSecurityAgency/ghidra/master/Ghidra/Framework/Gui/src/main/resources/images/GhidraIcon64.png" },
+      { label: "CyberChef", docUrl: "https://gchq.github.io/CyberChef/", iconUrl: "https://raw.githubusercontent.com/gchq/CyberChef/master/src/web/static/images/cyberchef-128x128.png" },
       { label: "Penetration Testing", docUrl: "https://www.google.com/search?q=penetration+testing+documentation", iconUrl: "https://cdn.simpleicons.org/kalilinux/00ff88" },
+      { label: "Wireshark", docUrl: "https://www.wireshark.org/docs/", iconUrl: "https://cdn.simpleicons.org/wireshark/ffffff" },
+      { label: "Snort", docUrl: "https://www.snort.org/documents", iconUrl: "https://cdn.simpleicons.org/snort/ffffff" },
+      { label: "Splunk", docUrl: "https://docs.splunk.com/", iconUrl: "https://cdn.simpleicons.org/splunk/ffffff" },
+      { label: "Nessus", docUrl: "https://docs.tenable.com/nessus/", iconUrl: "https://cdn.simpleicons.org/tenable/ffffff" },
+      { label: "Hashcat", docUrl: "https://hashcat.net/wiki/", iconUrl: "https://cdn.simpleicons.org/hashcat/ffffff" },
       { label: "OWASP Top 10", docUrl: "https://owasp.org/www-project-top-ten/", iconUrl: "https://cdn.simpleicons.org/owasp/ff4d6d" },
       { label: "Burp Suite", docUrl: "https://portswigger.net/burp/documentation", iconUrl: "https://cdn.simpleicons.org/burpsuite/f4a261" },
       { label: "Metasploit", docUrl: "https://docs.metasploit.com/", iconUrl: "https://img.icons8.com/?size=100&id=PW0ChfedZvTh&format=png&color=000000" },
@@ -40,6 +48,7 @@ const skillCategories: Category[] = [
       { label: "Email Security", docUrl: "https://www.google.com/search?q=email+security+SPF+DKIM+DMARC", iconUrl: "https://cdn.simpleicons.org/protonmail/a78bfa" },
       { label: "Security Reporting", docUrl: "https://www.google.com/search?q=security+report+writing+guide", iconUrl: "https://cdn.simpleicons.org/gitbook/a78bfa" },
       { label: "Subdomain Enum", docUrl: "https://www.google.com/search?q=subdomain+enumeration+tools+guide", iconUrl: "https://cdn.simpleicons.org/amazonaws/4cc9f0" },
+      
     ],
   },
   {
@@ -70,6 +79,7 @@ const skillCategories: Category[] = [
       { label: "Jupyter", docUrl: "https://docs.jupyter.org/", iconUrl: "https://cdn.simpleicons.org/jupyter/f4a261" },
       { label: "Data Analysis", docUrl: "https://pandas.pydata.org/docs/", iconUrl: "https://cdn.simpleicons.org/pandas/00ff88" },
       { label: "Medical Imaging", docUrl: "https://www.google.com/search?q=medical+imaging+AI+documentation", iconUrl: "https://cdn.simpleicons.org/diagramsdotnet/ff4d6d" },
+      { label: "GitLab", docUrl: "https://docs.gitlab.com", iconUrl: "https://cdn.simpleicons.org/gitlab/ffffff" },
     ],
   },
   {
