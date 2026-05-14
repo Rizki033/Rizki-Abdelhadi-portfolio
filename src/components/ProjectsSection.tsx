@@ -25,6 +25,13 @@ const projects = [
     stars: 2,
   },
   {
+    title: "VigilantScan",
+    description: "VigilantScan is a sleek React-based security dashboard that simulates website vulnerability scanning, highlights potential risks, and presents findings, reports, and scan activity in a modern SOC-style interface.",
+    tags: ["JavaScript","React.js","HTML","CSS"],
+    github: "https://github.com/Rizki033/VIGILANTSCAN",
+    stars: 2,
+  },
+  {
     title: "NetSentry AI",
     description: "AI-based DDoS attack detection system using machine learning to classify network traffic and identify malicious patterns in real-time.",
     tags: ["Python", "Machine Learning", "Network Security","Pandas","Scikit-learn"],
