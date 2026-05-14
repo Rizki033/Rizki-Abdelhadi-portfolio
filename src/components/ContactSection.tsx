@@ -51,34 +51,43 @@ const ContactSection = () => {
                             </div> */}
                         </div>
 
-                        <form className="space-y-4">
+                        <form
+                            action="https://send.pageclip.co/M6DsQNaVJXhIJ81gPAyi5prHfmAJr5iO"
+                            method="post"
+                            className="space-y-4 pageclip-form"
+                        >
                             <div className="grid sm:grid-cols-2 gap-4">
                                 <input
+                                    name="name"
                                     type="text"
                                     placeholder="NAME"
                                     className="w-full px-4 py-3 rounded-lg bg-card/50 border border-border focus:border-primary/50 focus:ring-1 focus:ring-primary/20 outline-none font-mono text-xs transition-all"
                                 />
                                 <input
+                                    name="email"
                                     type="email"
                                     placeholder="EMAIL"
                                     className="w-full px-4 py-3 rounded-lg bg-card/50 border border-border focus:border-primary/50 focus:ring-1 focus:ring-primary/20 outline-none font-mono text-xs transition-all"
                                 />
                             </div>
                             <input
+                                name="subject"
                                 type="text"
                                 placeholder="SUBJECT"
                                 className="w-full px-4 py-3 rounded-lg bg-card/50 border border-border focus:border-primary/50 focus:ring-1 focus:ring-primary/20 outline-none font-mono text-xs transition-all"
                             />
                             <textarea
+                                name="message"
                                 placeholder="MESSAGE"
                                 rows={6}
                                 className="w-full px-4 py-3 rounded-lg bg-card/50 border border-border focus:border-primary/50 focus:ring-1 focus:ring-primary/20 outline-none font-mono text-xs transition-all resize-none"
                             ></textarea>
                             <button
                                 type="submit"
-                                className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-mono font-bold text-xs tracking-widest hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group border-glow shadow-lg shadow-primary/20"
+                                className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-mono font-bold text-xs tracking-widest hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group border-glow shadow-lg shadow-primary/20 pageclip-form__submit"
                             >
-                                CONNECT <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                <span>CONNECT</span>
+                                <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
                         </form>
                     </div>
